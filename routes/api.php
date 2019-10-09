@@ -13,7 +13,7 @@ Route::delete('/menus/{menu}/items', 'MenuItemController@destroy');
 Route::get('/menus/{menu}/layers/{layer}', 'MenuLayerController@show');
 Route::delete('/menus/{menu}/layers/{layer}', 'MenuLayerController@destroy');
 
-Route::get('/menus/{menu}/depth', 'MenuDepthControlles@show');
+Route::get('/menus/{menu}/depth', 'MenuDepthController@show');
 
 Route::post('/items', 'ItemController@store');
 Route::get('/items/{item}', 'ItemController@show');
