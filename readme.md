@@ -560,7 +560,7 @@ Regarding the question "10 vs 1.000.000 menu items - what would you do different
 
 [Docker Hub repository](https://hub.docker.com/r/tomys/cobiro_task-menu "Docker Hub repository")
 
-Docker project structure *(docker files can be found in docker.zip files inside this GitHub repository)*:
+Docker project structure *(docker files can be found in docker.zip archive inside this GitHub repository)*:
 * app
 	* Laravel project files (pull from this GitHub repository)
 * nginx
