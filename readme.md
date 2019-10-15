@@ -554,3 +554,21 @@ Things that could be done better but were excluded because of time consumed for 
 * Documention should be written.
 
 Regarding the question "10 vs 1.000.000 menu items - what would you do differently?": few previously mentioned bullet-points related to optimization and caching would make the difference for higher load of storage.
+
+
+## Docker and Laravel setup instructions - by Toms
+
+Docker project structure *(docker files can be found in docker.zip files inside this GitHub repository)*:
+* app
+	* Laravel project files (pull from this GitHub repository)
+* nginx
+	* conf.d
+		* app.conf
+* php
+	* local.ini
+* docker-compose.yml
+* Dockerfile
+
+Commands necessary for project to work:
+* ```composer install```
+* ```php artisan migrate:refresh --seed```
