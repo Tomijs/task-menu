@@ -516,3 +516,41 @@ Get depth of menu.
 * Use cache
 * Use data structures
 * Use docker
+
+
+## Comments / Considerations - by Toms
+
+Task descriptions could be written in much more detail because quite many things are not clear, like
+
+* What are development restrictions - anything is allowed or without 3rd party dependencies, etc.;
+* Route requirements and output could be described in more detail, for example, at first I did not understand how POST /items route is different from POST /menus/{menu}/items;
+* Layer is not clearly understandable without extra information;
+* Also, difficult to understand if max_children is per layer or per parent item.
+
+
+## Development results - by Toms
+
+I managed to do most of the tasks written above.
+
+* All routes (with "bonus" requirements) are developed but tested only by using the actual API calls and debugging;
+* Created data factories and seeders;
+* Used PhpCS and PhpCsFixer for PSR1 and PSR2 rules;
+* Used Redis (PHPRedis) cache;
+* Used data structures;
+* Used docker.
+
+
+## Possible development improvements - by Toms
+
+API Authentication not included just because this is a prototype project.
+
+Things that could be done better but were excluded because of time consumed for these tasks:
+
+* Caching is added only to MenuController;
+* Data gathering is not fully optimized. Should have used eager loading in few places but I have not tested if that would reduce SQL connections;
+* Some validations could be optimized better with less SQL connections (have not tested - just thoughts);
+* Tests should be written;
+* Validations could be moved to separate files for cleaner and more structured code;
+* Documention should be written.
+
+Regarding the question "10 vs 1.000.000 menu items - what would you do differently?": few previously mentioned bullet-points related to optimization and caching would make the difference for higher load of storage.
